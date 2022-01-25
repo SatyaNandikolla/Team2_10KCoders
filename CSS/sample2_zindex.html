@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>zindex</title>
+</head>
+<style>
+    #parent {
+        width: 500px;
+        height: 200px;
+        background: gray;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid gray;
+        position: absolute;
+        z-index: 1;
+   }
+
+    #child {
+        width: 300px;
+        height: 150px;
+        margin: 20px auto;
+        background: yellow;
+    }
+    #second{
+        position: absolute;
+        z-index: 2;
+    }
+</style>
+
+<body>
+    <div id="parent">
+        <div id="child">
+            <h2>Hello World From ZIndex Topic</h2>
+        </div>
+    </div>
+    <div id="second">
+        <h2 style="background: red;">I am from second element</h2>
+    </div>
+</body>
+
+</html>
