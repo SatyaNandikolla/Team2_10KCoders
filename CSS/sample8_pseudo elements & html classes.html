@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Pseudo-elements and HTML Classes
+Pseudo-elements can be combined with HTML classes: 
+
+Example
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}
+The example above will display the first letter of paragraphs with class="intro", in red and in a larger size. */
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+} 
+/* multiple pseudo elements  
+Multiple Pseudo-elements
+Several pseudo-elements can also be combined.*/
+
+/* In the following example, the first letter of a paragraph will be red, in an xx-large font size.
+ The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color: */
+p::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+</style>
+</head>
+<body>
+
+<p class="intro">This is an introduction.</p>
+<p>This is a paragraph with some text. A bit more text even.</p>
+<!-- CSS - The ::before Pseudo-element
+The ::before pseudo-element can be used to insert some content before the content of an element.
+
+The following example inserts an image before the content of each <h1> element -->
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1::before {
+  content: url(smiley.gif);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+<h1>This is a heading</h1>
+
+</body>
+</html>
+<!-- CSS - The ::before Pseudo-element
+The ::before pseudo-element can be used to insert some content before the content of an element.
+
+The following example inserts an image before the content of each <h1> element: -->
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1::before {
+  content: url(smiley.gif);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+<h1>This is a heading</h1>
+
+</body>
+</html>
+<!-- CSS - The ::after Pseudo-element
+The ::after pseudo-element can be used to insert some content after the content of an element.
+
+The following example inserts an image after the content of each <h1> element: -->
+    <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1::after {
+  content: url(smiley.gif);
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>The ::after pseudo-element inserts content after the content of an element.</p>
+
+<h1>This is a heading</h1>
+
+</body>
+</html>
+<!-- CSS - The ::marker Pseudo-element
+The ::marker pseudo-element selects the markers of list items.
+
+The following example styles the markers of list items: -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::marker { 
+  color: red;
+  font-size: 23px;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+</body>
+</html>
+<!-- CSS - The ::selection Pseudo-element
+The ::selection pseudo-element matches the portion of an element that is selected by a user.
+
+The following CSS properties can be applied to ::selection: color, background, cursor, and outline.
+
+The following example makes the selected text red on a yellow background: -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+::selection {
+  color: red;
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1>Select some text on this page:</h1>
+
+<p>This is a paragraph.</p>
+<div>This is some text in a div element.</div>
+
+</body>
+</html>

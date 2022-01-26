@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Other Selectors</title>
+    </head>
+    <style>
+        /*Descendant Selector(space)*/
+        /* div p{
+        color: red;
+        } */
+
+        /*Child Selector (>)*/
+        /* div >p{
+            color: red;
+        } */
+
+        /* Adjacent Sibling Selector(+) */
+        /* div +p{
+            color: red;    
+        }  */
+
+        /*General Sibling Selector*/
+        div ~p{
+            color: red;
+        }
+    </style>
+    <body>
+        <!-- Descendant Selector(space) -->
+        <!-- <div>
+            <p>Paragraph1 in the div</p>
+            <p>Paragraph2 in the div</p>
+            <selection><p>Paragraph div in the div</p></selection>
+        </div>  -->
+
+        <!-- Child Selector (>) -->
+        <!-- <div>
+            <p>Paragraph1 in the div</p>
+            <p>Paragraph2 in the div</p>
+            <selection>-->
+                  <!-- Not child but Decendent  -->
+                <!-- <p>Paragraph3 in the div (inside a section element)</p>
+            </selection>
+            <p>paragraph4 in the div</p> --> 
+
+            <!-- Adjacent Sibling Selector(+)-->
+            <div>
+                <p>Paragraph1 in the div</p>
+                <p>Paragraph2 in the div</p>
+            </div>
+            <p>Paragraph3 after a div</p>
+            <p>Paragraph4 after a div</p>
+
+
+        </div>
+    </body>
+</html>

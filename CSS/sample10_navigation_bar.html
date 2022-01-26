@@ -1,0 +1,55 @@
+<!-- Navigation Bars
+Having easy-to-use navigation is important for any web site.
+
+With CSS you can transform boring HTML menus into good-looking navigation bars.
+
+Navigation Bar = List of Links
+A navigation bar needs standard HTML as a base.
+
+In our examples we will build the navigation bar from a standard HTML list.
+
+A navigation bar is basically a list of links, so using the <ul> and <li> elements makes perfect sense: -->
+    <!DOCTYPE html>
+<html>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
+
+</body>
+</html>
+<!--Now let's remove the bullets and the margins and padding from the list:
+Example explained:
+
+list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
+Set margin: 0; and padding: 0; to remove browser default settings
+The code in the example above is the standard code used in both vertical, and horizontal navigation bars,
+ which you will learn more about in the next chapters.-->
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+</head>
+<body>
+
+<p>In this example, we remove the bullets from the list, and its default padding and margin.</p>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</body>
