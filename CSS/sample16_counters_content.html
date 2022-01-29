@@ -1,0 +1,241 @@
+<!-- CSS content Property 
+Used with the ::before and ::after pseudo-elements, to insert generated content
+The following example inserts the value of the href attribute in parenthesis after each <a> element:-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a::after {
+            content: " ("attr(href) ")";
+        } */
+        a::before{
+            content: "("attr(target) ")";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The content Property</h1>
+    <p>The content property is used to insert generated content.</p>
+
+    <p>Look at our:</p>
+    <p>
+        <a href="https://www.w3schools.com/css/" target=_blank;>CSS Tutorial</a><br>
+        <a href="https://www.w3schools.com/cssref/" target=_blank;>CSS Reference</a>
+    </p>
+
+</body>
+
+</html>
+
+
+<!-- CSS counter-increment Property
+    The counter-increment property increases or decreases the value of one or more CSS counters.
+The counter-increment property is usually used together with the counter-reset property 
+and the content property.
+Create a counter ("my-sec-counter") and increase it by one for each occurrence of the <h2> selector: -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  /* Set "my-sec-counter" to 0 */
+  counter-reset: my-sec-counter;
+}
+
+h2::before {
+  /* Increment "my-sec-counter" by 1 */
+  counter-increment: my-sec-counter;
+  content: "Section " counter(my-sec-counter) ". ";
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Bootstrap Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>PHP Tutorial</h2>
+
+</body>
+</html>
+
+<!-- Create a counter ("my-sec-counter") and decrease it by
+     one for each occurrence of the <h2> selector: -->
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        body {
+          /* Set "my-sec-counter" to 0 */
+          counter-reset: my-sec-counter;
+        }
+        
+        h2::before {
+          /* Decrement "my-sec-counter" by 1 */
+          counter-increment: my-sec-counter -1;
+          content: "Section " counter(my-sec-counter) ". ";
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <h2>Bootstrap Tutorial</h2>
+        <h2>SQL Tutorial</h2>
+        <h2>PHP Tutorial</h2>
+        
+        </body>
+        </html>
+
+
+        <!-- Numbering sections and sub-sections with "Section 1:", "1.1", "1.2", etc. -->
+        <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  /* Set "section" to 0 */
+  counter-reset: section;
+}
+
+h1 {
+  /* Set "subsection" to 0 */
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
+</style>
+</head>
+<body>
+
+<h1>HTML and CSS</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>Bootstrap Tutorial</h2>
+<hr>
+
+<h1>JavaScript</h1>
+<h2>JavaScript Tutorial</h2>
+<h2>jQuery Tutorial</h2>
+<h2>JSON Tutorial</h2>
+<hr>
+
+<h1>Server Side</h1>
+<h2>SQL Tutorial</h2>
+<h2>PHP Tutorial</h2>
+
+</body>
+</html>
+
+<!-- Create a counter and increase it by one (using Roman numerals) for each
+     occurrence of the <h2> selector: -->
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        body {
+          /* Set "my-sec-counter" to 0 */
+          counter-reset: my-sec-counter;
+        }
+        
+        h2::before {
+          /* Increment "my-sec-counter" by 1 */
+          counter-increment: my-sec-counter;
+          content: counter(my-sec-counter, upper-roman) ". ";
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <h2>Bootstrap Tutorial</h2>
+        <h2>SQL Tutorial</h2>
+        <h2>PHP Tutorial</h2>
+        
+        </body>
+        </html>
+
+
+        <!-- counter-reset	Creates or resets one or more counters
+        Create a counter ("my-sec-counter") and increase it by one for 
+        each occurrence of the <h2> selector: 
+            The counter-reset property creates or resets one or more CSS counters.
+
+The counter-reset property is usually used together with the counter-increment
+ property and the content property.-->
+            <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  /* Set "my-sec-counter" to 0 */
+  counter-reset: my-sec-counter;
+}
+
+h2::before {
+  /* Increment "my-sec-counter" by 1 */
+  counter-increment: my-sec-counter;
+  content: "Section " counter(my-sec-counter) ". ";
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Bootstrap Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>PHP Tutorial</h2>
+
+</body>
+</html>
+<!-- counter()	Returns the current value of the named counter
+CSS counter() Function
+Create a counter for the page (in the body selector). Increment the counter value for each <h2> element, 
+and add the text "Section <value of the counter>:" before each <h2> element: 
+    Definition and Usage
+The counter() function returns the current value of the named counter, as a string.-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+
+</body>
+</html>

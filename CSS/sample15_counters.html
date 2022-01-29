@@ -1,0 +1,149 @@
+<!-- CSS counters are "variables" maintained by CSS whose values can be incremented by 
+CSS rules (to track how many times they are used). Counters let you adjust the appearance of 
+content based on its placement in the document. 
+Automatic Numbering With Counters
+CSS counters are like "variables". The variable values can be incremented by CSS rules 
+(which will track how many times they are used).
+
+To work with CSS counters we will use the following properties:
+
+counter-reset - Creates or resets a counter
+counter-increment - Increments a counter value
+content - Inserts generated content
+counter() or counters() function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset.
+
+The following example creates a counter for the page (in the body selector), then increments
+ the counter value for each <h2> element and adds "Section <value of the counter>:" 
+to the beginning of each <h2> element:-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: Section;
+        }
+
+        h2::before {
+            counter-increment: Section;
+            content: "Section "counter(Section) " :";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using CSS Counters</h1>
+
+    <h2>Html Tutuorial</h2>
+    <h2>Css Tutorial</h2>
+    <h2>Javascript Tutorial</h2>
+    <h2>ReactJs Tutorial</h2>
+    <h2>Redux Tutorial</h2>
+</body>
+
+</html>
+<br />
+<hr />
+<!-- Nesting Counters
+The following example creates one counter for the page (section) and one counter for
+each <h1> element (subsection). The "section" counter will be counted for each <h1> 
+element with "Section <value of the section counter>.", and the "subsection" counter will be counted 
+for each <h2> element with "<value of the section counter>.<value of the subsection counter>":
+    A counter can also be useful to make outlined lists because a new instance of a counter 
+is automatically created in child elements. Here we use the counters() function to insert 
+a string between different levels of nested counters: -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            counter-reset: Section;
+        }
+
+        h1::before {
+            counter-increment: Section;
+            content: "Section"counter(Section) ".";
+        }
+
+        h2::before {
+            counter-increment: subSection;
+            content: counter(Section) "."counter(subSection) " ";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Html/Css Tutorials</h1>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>Bootstrap</h2>
+    <h2>W3.Css</h2>
+
+    <h1>Scripting Tutorailas</h1>
+    <h2>Javascript</h2>
+    <h2>JQuery</h2>
+    <h2>React Js</h2>
+
+    <h1>Programming Tutorilas</h1>
+    <h2>C++</h2>
+    <h2>Java</h2>
+    <h2>Python</h2>
+</body>
+
+</html>
+<!--  Insert a string between different levels of nested counters -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section, ".") " ";
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>item</li>
+        <li>item   
+        <ol>
+          <li>item</li>
+          <li>item</li>
+          <li>item
+          <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ol>
+          </li>
+          <li>item</li>
+        </ol>
+        </li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      
+      <ol>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+</body>
+
+</html>
