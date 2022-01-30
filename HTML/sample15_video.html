@@ -1,0 +1,69 @@
+<!-- HTML Video
+The HTML <video> element is used to show a video on a web page. -->
+
+    <!-- HTML Video Tags
+Tag	          Description
+<video>	Defines a video or movie
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
+<track>	Defines text tracks in media players -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <style>
+        div {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- HTML <video> Autoplay
+To start a video automatically, use the autoplay attribute: 
+Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
+
+Add muted after autoplay to let your video start playing automatically (but muted):-->
+
+
+        <!-- <video controls width="600px" autoplay> -->
+            <video controls width="600px" autoplay muted>
+            <source src="Videos/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+
+</html>
+
+<!-- The HTML <video> Element
+To show a video in HTML, use the <video> element: -->
+
+    <!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls>
+  <source src="Videos/movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+
+<!-- HTML Video - Media Types
+File Format	Media Type
+MP4	video/mp4
+WebM	video/webm
+Ogg	video/ogg
+HTML Video - Methods, Properties, and Events
+The HTML DOM defines methods, properties, and events for the <video> element.
+
+This allows you to load, play, and pause videos, as well as setting duration and volume.
+
+There are also DOM events that can notify you when a video begins to play, is paused, etc. -->
+

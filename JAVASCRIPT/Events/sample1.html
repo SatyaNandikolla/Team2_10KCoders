@@ -1,0 +1,66 @@
+<!-- Click
+dobleClick
+Mouseover
+MouseOut -->
+
+<!-- click - onclick
+mouseover - onmouseover
+mouseout  - onmouseout
+doubleclick- ondblclick -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="clickMe()">Click Me</button>
+    <button onmouseover="hoverMe()">Hover Me</button>
+    <button onmouseout="goOutFromMe()">Go Out From Me</button>                                                                                                                     
+    <button ondblclick="doubleClick()">Double Click</button>
+    <!-- text input field- onfocus -->
+    <input type="text" name="" id="" onfocus="justFocused()" onblur="justBlured()">
+    
+        <select name="" id="" onchange="optChangeEvent()">
+            <option value="opt">Option</option>
+            <option value="opt1">Option 1</option>
+            <option value="opt2">Option 2</option>
+            <option value="opt3">Option 3</option>
+    </select>
+    <script>
+    //click-onclick
+        function clickMe(){
+            alert("Hello, you clicked me!!")
+            console.log("Hello, you clicked me!!")
+        }
+        //mouseover-onmouseover
+        function hoverMe(){
+            alert("Hello, just you mouse hovered me!!")
+            console.log("Hello, just you mouse hovered me!!")
+        }
+        //mouseout-onmouseout
+        function goOutFromMe(){
+            alert("Hello, just you are gone out from me")
+            console.log("hello, just you are gone out from me")     
+        }
+        //doubleclick-onDoubleClick
+        function doubleClick(){
+            alert("Hello, you are double clicked me")
+            console.log("Hello, you are double clicked me")
+        }
+        //  text input field- onfocus 
+        function justFocused(){
+            console.log("you just focused on me !!...or enter in input field")
+        }
+        function justBlured(){
+            console.log("you Just Blured or gone out of the field")
+        }
+        //we have one more field its like dropdown
+        function optChangeEvent(){
+            console.log("optChangeEvent Happened Here....")
+        }
+    </script>
+</body>
+</html>
