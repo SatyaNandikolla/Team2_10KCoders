@@ -1,7 +1,7 @@
 <!-- HTML Video
 The HTML <video> element is used to show a video on a web page. -->
 
-    <!-- HTML Video Tags
+<!-- HTML Video Tags
 Tag	          Description
 <video>	Defines a video or movie
 <source>	Defines multiple media resources for media elements, such as <video> and <audio>
@@ -22,6 +22,7 @@ Tag	          Description
         }
     </style>
 </head>
+
 <body>
     <div>
         <!-- HTML <video> Autoplay
@@ -32,7 +33,7 @@ Add muted after autoplay to let your video start playing automatically (but mute
 
 
         <!-- <video controls width="600px" autoplay> -->
-            <video controls width="600px" autoplay muted>
+        <video controls width="600px" autoplay muted>
             <source src="Videos/mov_bbb.mp4" type="video/mp4">
         </video>
     </div>
@@ -43,16 +44,18 @@ Add muted after autoplay to let your video start playing automatically (but mute
 <!-- The HTML <video> Element
 To show a video in HTML, use the <video> element: -->
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <body>
 
-<video width="320" height="240" controls>
-  <source src="Videos/movie.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <video width="320" height="240" controls>
+        <source src="Videos/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
 </body>
+
 </html>
 
 <!-- HTML Video - Media Types
@@ -67,3 +70,59 @@ This allows you to load, play, and pause videos, as well as setting duration and
 
 There are also DOM events that can notify you when a video begins to play, is paused, etc. -->
 
+
+<!-- Example: Using JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <video src="./videos/mov_bbb.mp4" controls></video> -->
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <div>
+        <video controls id="myvideo">
+            <source src="./videos/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        var videoEelement = document.getElementById("myvideo")
+
+        function playPause() {
+
+            if (videoEelement.paused) {
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+        function makeBig() {
+            videoEelement.style.width="900px"
+        }
+        function makeSmall() {
+            videoEelement.style.width="600px"
+        }
+
+        function makeNormal() {
+            videoEelement.style.width=""
+
+        }
+    </script>
+</body>
+
+</html>>
