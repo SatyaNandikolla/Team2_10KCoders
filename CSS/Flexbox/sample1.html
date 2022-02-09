@@ -1,0 +1,203 @@
+<!-- CSS Flexbox
+1
+2
+3
+4
+5
+6
+7
+8
+
+CSS Flexbox Layout Module
+Before the Flexbox Layout module, there were four layout modes:
+
+Block, for sections in a webpage
+Inline, for text
+Table, for two-dimensional table data
+Positioned, for explicit position of an element
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+
+Browser Support
+The flexbox properties are supported in all modern browsers.
+
+29.0	11.0	22.0	10	48
+Flexbox Elements
+To start using the Flexbox model, you need to first define a flex container.
+
+1
+2
+3
+The element above represents a flex container (the blue area) with three flex items. -->
+<html>
+    <head>
+        <title>Flexbox</title>
+        <style>
+            #container{
+            background:gray;
+            padding: 5px;
+            display: flex;
+            }
+            .box{
+                background-color: red;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;           
+            }
+        </style>
+    </head>
+    <body>
+         <div id="container">
+         <div class="box">1</div>
+         <div class="box">2</div>
+         <div class="box">3</div>
+         </div>
+    </body>
+</html>
+<!-- Example
+A flex container with three flex items:
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div> -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>A Flexible Layout must have a parent element with the 
+    <em>display</em> property set to <em>flex</em>.</p>
+
+<p>Direct child elements(s) of the flexible container
+     automatically becomes flexible items.</p>
+
+</body>
+</html>
+<!-- CSS Flex Container
+Parent Element (Container)
+Like we specified in the previous chapter, this is a 
+flex container (the blue area) with three flex items:
+
+1
+2
+3
+The flex container becomes flexible by setting the display property to flex:
+
+Example
+.flex-container {
+  display: flex;
+} -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>A Flexible Layout must have a parent element with 
+    the <em>display</em> property set to <em>flex</em>.</p>
+
+<p>Direct child elements(s) of the flexible container 
+    automatically becomes flexible items.</p>
+
+</body>
+</html>
+<!-- The flex container properties are:
+
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+The flex-direction Property
+The flex-direction property defines in which direction the container wants to
+ stack the flex items.
+
+1
+2
+3
+Example
+The column value stacks the flex items vertically (from top to bottom):
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+} -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-direction Property</h1>
+
+<p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom):</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
