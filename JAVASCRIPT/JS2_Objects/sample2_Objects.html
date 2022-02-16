@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=addSkills()>Add Skills</button>
+    <button onclick=addCompany()>Add Company</button>
+    <script>
+        // Object
+        // 1. Literal way
+        var person = {//an empty object is created
+            fname:"Satya",//property of an object
+            lname:"Nandikolla",
+            age: 20,
+            isLookingForJob: true,
+            experiance: null
+        } //an empty object is created.
+        console.log(person)
+        // 2. Object Oriented Programming way(oop)
+        function addSkills(){
+            person.skill="UI Developer"
+            console.log(person)
+        }
+        function addCompany(){
+            person["company"]="DELL"
+            console.log(person)
+        }
+
+        
+    </script>
+</body>
+</html>
