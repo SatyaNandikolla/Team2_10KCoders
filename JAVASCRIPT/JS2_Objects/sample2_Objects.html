@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <button onclick=addSkills()>Add Skills</button>
-    <button onclick=addCompany()>Add Company</button>
+    <button onclick="addSkills()">Add Skills</button>
+    <button onclick="addCompany()">Add Company</button>
+    <button onclick="deleteExperiance()">Delete Experiance</button>
     <script>
         // Object
         // 1. Literal way
@@ -20,7 +21,10 @@
             age: 20,
             isLookingForJob: true,
             experiance: null
-        } //an empty object is created.
+        }
+        
+        // delete person.experiance //direct ga add and delete kuda cheseyachu ilaga
+           
         console.log(person)
         // 2. Object Oriented Programming way(oop)
         function addSkills(){
@@ -29,6 +33,10 @@
         }
         function addCompany(){
             person["company"]="DELL"
+            console.log(person)
+        }
+        function deleteExperiance(){
+            delete person.experiance
             console.log(person)
         }
 
