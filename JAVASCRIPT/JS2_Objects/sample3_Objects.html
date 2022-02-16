@@ -1,0 +1,29 @@
+<!-- oop way to creating objects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  creating objects with buit in constructor 
+    //Built-in constructor
+    var person=new Object({email:"satyanandikolla32@gmail.com"})//directly passing an object
+    person.fname="Satya"//using .dot notation
+    person["lnmae"]="Nandikolla"//using square bracket notation
+    console.log(person)
+
+    //user-defined constructor or custom constructor
+    function Employee(fname,lname,email){
+        this.fname=fname;
+        this.lname=lname;
+        this.email=email;
+    }
+    var emp1=new Employee("Murali","Krishna","muralikrishna@gmail.com")
+    console.log(emp1)
+    </script>
+</body>
+</html>
