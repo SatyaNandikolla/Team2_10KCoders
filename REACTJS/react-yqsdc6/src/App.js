@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
-
+import Murali from "./Murali";
+//a component should return only one element
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <h2>Hello I Am From Reactjs Component</h2>
+      <Murali/>
     </div>
   );
 }
