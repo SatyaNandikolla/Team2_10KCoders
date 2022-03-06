@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Murali, Krishna, Sam } from './Murali';
-import Ervin from './Narendhra';
+import Some from './Narendhra';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Murali />
       <Krishna />
       <Sam />
-      <Ervin/>    
+      {console.log(Some)} 
     </div>
   );
 }
