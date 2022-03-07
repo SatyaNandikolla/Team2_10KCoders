@@ -14,9 +14,14 @@
                 this.lname=lname;
             }
         }
-        class child extends parent{
-            
-        }
+        class Child extends Parent{
+            constructor(fname,lname,email){
+                super(fname,lname);
+                this.email=email;
+            }
+                }
+        var newObj= new Child("Murali","Krishna","muralikrishna@gmail.com");
+        console.log(newObj)
 
     </script>
 </body>
