@@ -1,9 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { Murali, Krishna, Sam } from './Murali';
-import { Kiran } from './Narendhra';
-import Abc from './Narendhra';
-import { Harish } from './Harish';
+import { Employees } from './Functional_Components/Employees';
+import { Students } from './Functional_Components/Students';
 
 
 function App() {
@@ -15,7 +13,9 @@ function App() {
       <Sam />
       <Kiran />
       <Abc/> */}
-      <Harish/>
+
+      <Students/>
+      <Employees/>
     </div>
   );
 }
