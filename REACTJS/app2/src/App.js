@@ -1,7 +1,9 @@
 
 import './App.css';
+import { ClassRoom } from './ClassRoom';
 import { Employees } from './Functional_Components/Employees';
 import { Students } from './Functional_Components/Students';
+import { User } from './User';
 
 
 function App() {
@@ -13,9 +15,11 @@ function App() {
       <Sam />
       <Kiran />
       <Abc/> */}
+      {/* <ClassRoom/> */}
+      <User/>
 
-      <Students/>
-      <Employees/>
+    {/* <Students/>
+    <Employees/> */}
     </div>
   );
 }

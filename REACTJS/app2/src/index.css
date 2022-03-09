@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#myForm
+{
+  width:300px;
+  background:lightgray;
+  margin:0 auto;
+   padding:20px
+}
