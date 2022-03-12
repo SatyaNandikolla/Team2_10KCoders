@@ -1,4 +1,11 @@
 //rafc-shortcut of react arropw functional component
+// import React from "react";
+// export const Students = () => {
+//     return (
+//         <div>
+//         </div>
+//     );
+// }
 import React, { useState } from 'react';
 export const Students = () => {
     const [Students, setstudents] = useState({
