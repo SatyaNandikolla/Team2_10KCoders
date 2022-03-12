@@ -3,6 +3,7 @@ import './App.css';
 import { ClassRoom } from './ClassRoom';
 import { Employees } from './Functional_Components/Employees';
 import { Students } from './Functional_Components/Students';
+import LifeCycleComp from './LifeCycles/LifeCycleComp';
 import { User } from './User';
 
 
@@ -16,10 +17,10 @@ function App() {
       <Kiran />
       <Abc/> */}
       {/* <ClassRoom/> */}
-      <User/>
-
+      {/* <User/> */}
     {/* <Students/>
     <Employees/> */}
+    <LifeCycleComp/>
     </div>
   );
 }
