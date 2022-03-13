@@ -1,28 +1,16 @@
-
 import './App.css';
-import { ClassRoom } from './ClassRoom';
-import { Employees } from './Functional_Components/Employees';
-import { Students } from './Functional_Components/Students';
-
-import LifeCycleCompB from './LifeCycles/LifeCycleCompB';
-import { User } from './User';
+import { Users } from './Users';
+import { UsersFunc } from './UsersFunc';
 
 
 function App() {
   return (
     <div className="App">
       <h2>Hello From App</h2>
-      {/* <Murali />
-      <Krishna />
-      <Sam />
-      <Kiran />
-      <Abc/> */}
-      {/* <ClassRoom/> */}
-      {/* <User/> */}
-    {/* <Students/>
-    <Employees/> */}
-    {/* <LifeCycleComp/> */}
-    <LifeCycleCompB/>
+      
+  {/* <Users/> */}
+  <UsersFunc/>
+  
     </div>
   );
 }
