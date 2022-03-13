@@ -13,7 +13,7 @@ export const UsersFunc = () => {
     //useEffect(()=>{},[users])
     const handleDelete = (product) => {
         console.log(product)
-        let balanceProducts=products.filter((prd)=>prd.id !==product.id)
+        let balanceProducts = products.filter((prd) => prd.id !== product.id)
         setProducts(balanceProducts)
     };
     return (
