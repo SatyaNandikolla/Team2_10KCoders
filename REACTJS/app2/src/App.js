@@ -1,5 +1,7 @@
 import './App.css';
 import { Cricket } from './Cricket';
+import ClickCounter from './HigherOrderComponent/ClickCounter';
+import HoverCounter from './HigherOrderComponent/HoverCounter';
 import ComponentsContainer from './PureComponents.jsx/ComponentsContainer';
 import ParentComponent from './ReferenceComponent/ParentComponent';
 import { Sports } from './Sports';
@@ -17,7 +19,9 @@ function App() {
   {/* <Cricket/> */}
   {/* <Sports/> */}
   {/* <ParentComponent/> */}
-  <ComponentsContainer/>
+  {/* <ComponentsContainer/> */}
+  <ClickCounter/>
+  <HoverCounter/>
   
     </div>
   );
