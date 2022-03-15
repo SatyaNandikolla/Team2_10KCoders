@@ -1,22 +1,18 @@
 //rcc
 import React, { Component } from "react";
-export default class ClickCounter extends Component{
-    //rcon
-    constructor(props){
-        super(props);
-        this.state={
-            count:0
-        }
-    }
-    handleClick=()=>{
-        this.setState({count:this.state.count+1})
-    }
-    render(){
-        return(
-            <div>
-                <button onClick={this.handleClick}>Click Me</button>
-                <h1>You Clicked{this.state.count} times</h1>
+import { HOComp } from "./HOComp";
+class ClickCounter extends Component {
+
+    render() {
+        console.log(this.props)
+        let{handleCount,count,someInfo}=this.props;
+        return (
+            <div>          
+                <button onClick={handleCount}>Click Me</button>
+                <h1>You Clicked{count} times</h1>
+                <p>{someInfo}</p>
             </div>
         )
     }
 }
+export default HOComp(ClickCounter);
