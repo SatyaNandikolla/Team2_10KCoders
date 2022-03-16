@@ -5,7 +5,7 @@ export const ChildComp = ({ message }) => {
     return (
         <div>
             <hr />
-            <h3>Message Recieved From Parent Comp: {message}</h3>
+            <h3>Message Recieved From Parent Component: {message}</h3>
             <GrandChildComp message={message} />
         </div>
     )
