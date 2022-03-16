@@ -1,8 +1,9 @@
 import './App.css';
+import { ContainerComp } from './Context/ContainerComp';
 // import { Cricket } from './Cricket';
-import ClickCounter from './HigherOrderComponent/ClickCounter';
-import HoverCounter from './HigherOrderComponent/HoverCounter';
-import { MyCompContainer } from './RenderProps/MyCompContainer';
+// import ClickCounter from './HigherOrderComponent/ClickCounter';
+// import HoverCounter from './HigherOrderComponent/HoverCounter';
+// import { MyCompContainer } from './RenderProps/MyCompContainer';
 // import HoverCounter from './HigherOrderComponent/HoverCounter';
 // import ComponentsContainer from './PureComponents.jsx/ComponentsContainer';
 // import ParentComponent from './ReferenceComponent/ParentComponent';
@@ -25,7 +26,8 @@ function App() {
       {/* <ClickCounter /> */}
       {/* <hr/> */}
       {/* <HoverCounter/> */}
-      <MyCompContainer/>
+      {/* <MyCompContainer/> */}
+      <ContainerComp/>
     </div>
   );
 }
