@@ -27,7 +27,7 @@ function App() {
       {/* <hr/> */}
       {/* <HoverCounter/> */}
       {/* <MyCompContainer/> */}
-      <ContainerComp/>
+      {/* <ContainerComp/> */}
     </div>
   );
 }
