@@ -1,5 +1,6 @@
 import './App.css';
 import { ContainerComp } from './Context/ContainerComp';
+import Students from './Students';
 // import { Cricket } from './Cricket';
 // import ClickCounter from './HigherOrderComponent/ClickCounter';
 // import HoverCounter from './HigherOrderComponent/HoverCounter';
@@ -28,6 +29,8 @@ function App() {
       {/* <HoverCounter/> */}
       {/* <MyCompContainer/> */}
       {/* <ContainerComp/> */}
+      <Students/>
+      
     </div>
   );
 }

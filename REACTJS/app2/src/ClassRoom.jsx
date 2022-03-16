@@ -17,7 +17,7 @@ const deleteStudent=(student)=>{
 }
 return(
     <div>
-        <Students allStudents={students} handleDelete={deleteStudent}/>
+        {/* <Students allStudents={students} handleDelete={deleteStudent}/> */}
     </div>
 )
 }
