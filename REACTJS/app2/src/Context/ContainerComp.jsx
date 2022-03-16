@@ -8,10 +8,10 @@ export const ContainerComp = () => {
     const [message, setMessage] = useState("Welcome To React Context...")
     return (
         <div>
-            <UserProvider/>
+            <UserProvider>
             <h3>Hello From Container Comp</h3>
             <HomeComp message={message}/>
-            <UserProvider/>
+            </UserProvider>
         </div>
     )
 }
