@@ -15,7 +15,7 @@ class Users extends Component {
         this.props.dispatch(getAllUsersAction())
     }
     deleteUser = () => {
-        this.props.dispatch(deleteUsersAction())
+        this.props.dispatch(getAllUsersAction())
     }
 
     render() {
@@ -29,7 +29,7 @@ class Users extends Component {
                     return <p>{user}</p>
                 })}
             </div>
-        )
+        );
     }
     // componentDidMount() {
     //     console.log(this.props)
