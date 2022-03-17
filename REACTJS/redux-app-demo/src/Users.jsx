@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { deleteUsersAction, getAllUsersAction } from "./Redux/Actions";
 class Users extends Component {
     //con
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
 
         }
         console.log(props)
@@ -15,6 +15,7 @@ class Users extends Component {
         this.props.dispatch(getAllUsersAction())
     }
     deleteUser = () => {
+        console.log(this.props)
         this.props.dispatch(getAllUsersAction())
     }
 
@@ -25,8 +26,8 @@ class Users extends Component {
                 <h2>Hello From Users Component</h2>
                 <button onClick={this.getAllUsersDetails}>Get Users</button>
                 <button onClick={this.deleteUser}>Delete User</button>
-                {this.props.users && this.props.users.map((user)=>{
-                    return <p>{user}</p>
+                {this.props.users && this.props.users.map((user) => {
+                    return <p key={user}>{user}</p>
                 })}
             </div>
         );
@@ -44,7 +45,13 @@ class Users extends Component {
 function mapStateToProps(state) {
     return {
         users: state
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        getAllUsers: () => dispatch(getAllUsersAction()),
+        deleteUser: (user) => dispatch(deleteUsersAction(user))
     }
 }
-export default connect(mapStateToProps)(Users);
+export default connect(mapStateToProps,mapDispatchToProps)(Users);
 // export default Users
