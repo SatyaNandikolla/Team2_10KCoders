@@ -22,3 +22,6 @@ export default function rootReducer(state = defaultData, action) {
             return state;
     }
 }
+// const rootReducer=combinedReducers({
+//     students:rootReducer
+// })
