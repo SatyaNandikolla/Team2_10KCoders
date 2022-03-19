@@ -20,7 +20,7 @@ class Users extends Component {
         let newUser = { ...this.state.user }
         newUser[e.target.name] = e.target.value;
         this.setState({ user: newUser });
-        
+
     }
     handleClear = () => {
         // this.setState({user: {
@@ -54,7 +54,10 @@ class Users extends Component {
         // this.props.dispatch(getAllUsersAction())
         this.props.deleteUser(user);
     }
-    
+    handleEdit=(user)=>{
+        this.setState({user})
+    }
+
     // componentDidMount(){
     //     this.handleClear()
     // }
@@ -66,19 +69,25 @@ class Users extends Component {
                 <h2>Hello From Users Component</h2>
                 <form>
                     <label htmlFor="fname">First Name</label>
-                    <input type="text" name="fname" value={this.state.fname} onChange={(e) => { this.handleChange(e) }} /><br />
+                    <input type="text" name="fname" value={this.state.fname}
+                        onChange={(e) => { this.handleChange(e) }} /><br />
                     <label htmlFor="fname">Last Name</label>
-                    <input type="text" name="lname" value={this.state.lname} onChange={(e) => { this.handleChange(e) }} /><br />
+                    <input type="text" name="lname" value={this.state.lname}
+                        onChange={(e) => { this.handleChange(e) }} /><br />
                     <label htmlFor="fname">Email</label>
-                    <input type="text" name="email" value={this.state.email} onChange={(e) => { this.handleChange(e) }} /><br />
+                    <input type="text" name="email" value={this.state.email}
+                        onChange={(e) => { this.handleChange(e) }} /><br />
                     <button type="button" onClick={this.handleCreate}>Add User</button>
                 </form>
                 <br />
                 {/* <button onClick={this.getAllUsersDetails}>Get Users</button>
                 <button onClick={this.deleteUser}>Delete User</button> */}
-                {this.props.users && this.props.users.map((user,i) => {
-                    return <p key={i}>{user.fname} - <button>Edit User</button> 
-                    <button onClick={(user)=>{this.handleDelete(user)}}>Delete User</button></p>
+                {this.props.users && this.props.users.map((user, i) => {
+                    return <p key={i}>{user.fname} -
+                        <button onClick={()=>{this.handleEdit(user)}}>Edit User</button>
+                        <button onClick={() => {
+                            this.handleDelete(user)
+                        }}>Delete User</button></p>
                 })}
             </div>
         );

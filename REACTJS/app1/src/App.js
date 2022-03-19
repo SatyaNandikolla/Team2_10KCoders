@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Satya from './Satya';
+import Users from './Users';
 
 function App() {
   return (
     <div className="App">
-      <Satya/>
+      <Users/>
+      {/* <Satya/> */}
     </div>
   );
 }
+export default App;
