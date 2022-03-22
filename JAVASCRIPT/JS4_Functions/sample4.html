@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- function called wghen we click the button -->
+    <button onclick="sayHelloEvent()">Say Hello</button><!-- calling a function in javascript -->
+    <script>
+        //function defined or created Here
+        // function sayHelloEvent(){//named function
+        //         console.log("Hello Event")
+        //     }
+        //    var sayHelloEvent= function(){//Express Function
+        //         console.log("Hello Event")
+        //     }
+        function sayHiEvent() {
+            console.log("Hello Event")
+        }
+        var sayHelloEvent = sayHiEvent
+        sayHelloEvent()//calling a function in javascript
+
+    </script>
+</body>
+
+</html>

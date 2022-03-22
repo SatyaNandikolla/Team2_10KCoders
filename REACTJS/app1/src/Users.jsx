@@ -11,27 +11,26 @@ export default class Users extends Component {
             users: [],
         }
     }
-    handleAddUser = () => {
+    handleAddUser = ()=>{
         let allUsers = [...this.state.users]
         allUsers.push(this.state.user)
-        this.setState({ users: allUsers });
+        this.setState({users:allUsers});
         this.handleClear()
-
-    };
+        
+    } 
     handleChange = (e) => {
         let newUser = { ...this.state.user }
         newUser[e.target.name] = e.target.value
         this.setState({ user: newUser })
     }
-    handleClear = () => {
-        this.setState({
-            user: {
-                fname: "",
+    handleClear=()=>{
+            this.setState({user:{
+                fname:"",
             },
         });
     };
 
-
+    
     render() {
         return (
             <div>
@@ -41,12 +40,12 @@ export default class Users extends Component {
                     <input type="text" name="fname" value={this.state.user.fname} onChange={(e) => { this.handleChange(e) }} />
                     <button type="button" onClick={this.handleAddUser}>Add User</button>
                 </form>
-                {this.state.users.map((user, i) => (
+                {this.state.users.map((user,i)=>(
                     <p key={i}>{user.fname}</p>
 
-
+                    
                 ))}
-
+                  
             </div>
         )
     }

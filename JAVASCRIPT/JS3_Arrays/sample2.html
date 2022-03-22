@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var students=["Srikanth","Teja","Tejdeep","Harish"]
+        //Adding values to an array
+        //push method-we will add a value to the end of the array
+        // students.push("Divya")
+        // students.push("Satya")
+
+        //unshift method-we will add at the starting of an array
+        // students.unshift("Sandhya")
+
+        //splice-if you want to add the value with the middle or particular play you can use splice method
+        // students.splice(2,0,"Murali")//without replacing a value add a value of an array
+        // students.splice(2,1,"Murali")//with replacing a value add a value of an array to that place 
+        // students.splice(2,2,"Murali")//with replacing a values add a value of an array to that place-two values replace avutayi aaa place nunchi 
+        
+        //pop-it will remove last value of an array
+        // students.pop()
+
+        //shift-it will removes first value of an array
+        // students.shift()
+
+        //middle lo vunna element ni remove cheyali ante malli splice method ne use cheyali
+        // students.splice(2,1)
+        //two values ni remove cheyali ante 1 tesesi 2 istamu
+        // students.splice(2,2)
+
+        //sort-it will sort the values/elements in alphabetical order
+        // students.sort()
+
+        //reverse-it will reverse the order of the values in bottom to top way
+        students.reverse()
+        
+        let results=""
+        for(i=0;i<students.length;i++){
+            console.log(students[i])
+            results=results+students[i]+"<br/>"
+        }
+        document.getElementById("demo").innerHTML=results
+    </script>
+</body>
+</html>

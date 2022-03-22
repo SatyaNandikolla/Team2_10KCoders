@@ -32,9 +32,37 @@
                 "state": "Ap",
                 "zip": 82316
             }
+            var user = {
+                "id": 1,
+                "name": "Leanne Graham",
+                "username": "Bret",
+                "email": "Sincere@april.biz",
+                "address": {
+                    "street": "Kulas Light",
+                    "suite": "Apt. 556",
+                    "city": "Gwenborough",
+                    "zipcode": "92998-3874",
+                    "geo": {
+                        "lat": "-37.3159",
+                        "lng": "81.1496"
+                    }
+                },
+                "phone": "1-770-736-8031 x56442",
+                "website": "hildegard.org",
+                "company": {
+                    "name": "Romaguera-Crona",
+                    "catchPhrase": "Multi-layered client-server neural-net",
+                    "bs": "harness real-time e-markets"
+                }
+            }
             var allInfo = ""
-            for(b in person){
-                console.log(person[b])
+            //we can display an object directly for in loop
+            //or we can convert that into an array & and you can use the array for loop
+            for (a in person) {//for loop for object
+                // console.log(user[a])//displays only property values
+                console.log(a)//displays only property keys or property names
+                allInfo=allInfo+person[a] +"<br/>" 
+                // allInfo=person[a]          
             }
             document.getElementById("myDetails").innerHTML = allInfo
             // document.getElementById("myDetails").innerHTML=person.fname+"<br/>"+

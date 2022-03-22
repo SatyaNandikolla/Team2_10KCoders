@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  function(){}  ES 5 -->
+    <!-- var ch4=students.find(function(){}) -->
+        <!--  ()=>{} ES6  Array function or Fat Arrow Function -->
+        <!-- var ch4=students.find(()=>{}) -->
+    <div id="demo"></div>
+    <script>
+        var students=["Srikanth","Teja","Tehdeep","Harish","Hema"]
+        var results="";
+    //ES5 lo array iterate cheyadaniki for loop vunnattu ES6 lo e foreach statement vuundhi dani syntax e idhi
+        // array.forEach(element=>{});
+
+        //to iterate an array
+        var newStudents=students.map((val)=>{
+            return val+"_10k"//adding a values tom the existing elements
+        })       
+        newStudents.forEach(val=>{
+            // results+=val +"</br>" //(or)
+            results=results+val +"</br>"
+
+        });
+
+        //find-check the letters of the word-it shows first element only as an output
+        // var ch4=students.find((student)=>{
+        //     return student.length==4
+        // })
+
+        //filter-check the letters of the word-it shows all the elements when the condition is satisfied
+        var ch4=students.filter((student)=>{
+            return student.length==4
+        })
+        console.log(ch4)
+        document.getElementById("demo").innerHTML=results
+
+        //check-for checking those values letter are 4 letters or not
+        //every-it will shows every value or element is 4 letter or not in the array. if it is all the elements 
+        // are 4 it will shows true or else it will shows false
+        // var check4=students.every((val)=>{
+        //     return val.length==4
+        // })
+        // console.log(check4)
+
+        // some-it will shows every value or element is 4 letter or not if the array has one element has 
+        // 4 letters it will shows true or else it will shows false
+        var check4=students.some((student)=>{
+            return student.length==4
+        })
+        console.log(check4)
+    </script>
+</body>
+</html>
