@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color: gray;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        for(i=0;i<5;i++){
+             //we are adding a paragraph
+        //step-1:creating an element
+        var pera=document.createElement("p")
+
+        //Adding css attribute to an element
+        pera.setAttribute("class","item")
+
+        //Adding style to an element
+        pera.style.textAlign="center"
+        pera.style.padding="5px"
+
+        //step-2:Adding text to element
+        pera.innerHTML="Hello, I Am from pera"+i;
+        //step-3:appending that element to body section
+        // document.body.appendChild(para)
+
+        //Adding an element in to an element named demo
+        document.getElementById("demo").appendChild(pera)
+        // document.getElementById("demo").innerHTML=pera           
+        }
+    </script>
+</body>
+</html>

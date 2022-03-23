@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="muHeading">Hello I Am Inside Heading2</h2>
+    <h2 class="myHeadingElement">Hello I Am Also Inside Heading2</h2>
+    <input type="email" name="email" id="">
+    <script>
+        //Acces all html elements
+        //Delete existing html elements
+        //Modifying existing html elements
+        //Add new html elements
+        //Modify html elements attributes..exmple -style,class,id,event handler
+
+        //these methods for without id,class,name of the element(elements doesnot have any selectors or attributes (name,type))
+        // document.getElementsByTagName("h2")//for array of collections or array of elements
+        // document.getElementsByTagName("h2")[0]//for element e index lo vundhi ani
+        // document.getElementsByTagName("h2")[0].innerText//for text
+
+        // document.getElementsByTagName("h2")
+        // document.getElementsByTagName("h2")[0]
+        // document.getElementsByTagName("h2")[0].innerText
+        // document.getElementsByTagName("h2")[1]
+        // document.getElementsByTagName("h2")[1].innerText
+
+        // document.getElementsByTagName("h2")//we will access all h2's in document, return an array of elements
+        // document.querySelector("h2")//we will access only first element in the document
+        // document.querySelectorAll("h2")//it will also access all the elements in the document like TagName
+        // document.querySelectorAll("h2")[0]
+        // document.querySelectorAll("h2")[0].innerText
+
+        //these methods for id,class,name of the element(elements have selectors)
+        // document.getElementById("myHeading")
+        // document.getElementById("myHeading").innerText(or type2)
+        // document.querySelector("#myHeading")//for single element
+        // document.querySelectorAll("#myHeading")//for multiple elements
+        // document.querySelectorAll("#myHeading")[0]
+        // document.querySelectorAll("#myHeading")[1]
+
+        //adhe class vunte
+        //document.getElementsByClassName("myHeadingElement")
+        // document.getElementsByClassName("myHeadingElement")[0]
+        // document.getElementsByClassName("myHeadingElement")[0].innerText
+        // document.querySelector(".myHeadingElement")
+        // document.querySelectorAll(".myHeadingElement") 
+        
+        //if it is an input field-if an element has an name attribute
+        // document.getElementsByName("email")
+        // document.getElementsByName("email")[0]
+        // document.querySelector('[type="email"]')//ila oka attribute selector ni kuda select cheyachu
+    </script>
+
+</body>
+
+</html>
