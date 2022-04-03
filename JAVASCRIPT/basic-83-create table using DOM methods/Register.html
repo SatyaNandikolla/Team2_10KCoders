@@ -38,6 +38,35 @@
     <!-- content body -->
     <section id="slider"><a href="#"><img src="images/demo/960x280.gif" alt=""></a></section>
     <!-- main content -->
+    <div class="row">
+        <div class="col">
+            
+        </div>
+        <div class="col">
+            <form onsubmit="getUserData(event)">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullName" aria-describedby="emailHelp">
+                    
+                  </div>
+                  <div class="mb-3">
+                    <label for="userName" class="form-label">User name</label>
+                    <input type="text" class="form-control" id="userName" aria-describedby="emailHelp">
+                    
+                  </div>
+                <!-- <button type="button" class="btn btn-primary" onclick="getUserData()">Submit</button> -->
+                <!-- <button class="btn btn-primary" type="button">Submit</button> -->
+                <button class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+        <div class="col">
+            
+        </div>
     <div id="homepage">
       <!-- services area -->
       <section id="services" class="clear">
@@ -96,5 +125,28 @@
     <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
   </footer>
 </div>
+<script>
+    function getUserData(event){
+        event.preventDefault()
+    //     // console.log(event)
+    //     console.log("getUserData Called")
+    //     let email=document.querySelector("#email").value
+    //     console.log(email)
+    
+    var person={
+        // fullName:document.getElementById("fullName").value,
+        // email:document.getElementById("email").value,
+        // userName:document.getElementById("userName").value
+        fullName:"",
+        email:"",
+        userName:""
+    }
+    for(a in person){
+        person[a]=document.getElementById(a).value
+    }
+    console.log(person)
+}
+    document.querySelector("button").onclick=getUserData
+</script>
 </body>
 </html>

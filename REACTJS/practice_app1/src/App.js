@@ -1,15 +1,15 @@
 import './App.css';
-import { Employees } from './Employees';
-
-
-
+import { Narendhra } from './Narendhra';
 function App() {
   return (
     <div className="App">
-      <h2>I AM From App Component</h2> 
-      <Employees/>
-         
+      <h2>Hello From App</h2>
+     
+     <Narendhra/>
+      
     </div>
   );
 }
+
 export default App;
+                                  
