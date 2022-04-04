@@ -14,24 +14,23 @@
                 <form>
                     <div class="mb-3">
                       <label for="firstName" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="fname">
+                      <input type="text" class="form-control" id="fname" onkeyup="validate()">
                     </div>
                     <div class="mb-3">
                       <label for="lastName" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="lname">
+                      <input type="text" class="form-control" id="lname" onkeyup="validate()">
                     </div>
                     <div class="mb-3">
                       <label for="email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      <input type="email" class="form-control" id="email" onkeyup="validate()">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="createPerson()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="createPerson()" disabled>Submit</button>
                   </form>
             </div>
             <div class="col">
                 <table class="table">
                     <thead>
                       <tr>
-                        <th>#</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -44,47 +43,9 @@
             </div>
         </div>
     </div>
-    <!-- <script src="Create.js"></script>
+    <script src="Create.js"></script>
     <script src="Clear.js"></script>
-    <script src="Display.js"></script> -->
-    <script>
-        //create the form 
- 
-var persons=[]
-function createPerson(){
-    var person={
-    fname:"",
-    lname:"",
-    email:""
-}
-    for(a in person){
-        person[a]=document.getElementById(a).value
-    }
-    persons.push(person)
-    console.log(person)
-    clearPerson()
-    displayPersons()
-}
-//clear the form
-function clearPerson(){
-  for(a in persons[0]){
-    document.getElementById(a).value="";
-  }
-}
-function displayPersons(){
-    document.querySelector("tbody").innerHTML=""
-    persons.forEach((person)=>{
-        //creating the tr
-        var myTr=document.createElement("tr")
-        for(a in person){
-            var myTd=document.createElement("td")
-            myTd.innerHTML=person[a]
-            myTr.appendChild(myTd)
-        }
-        document.querySelector("tbody").appendChild(myTr)
-    })
-
-}
-    </script>
+    <script src="Display.js"></script> 
+    <script src="validate.js"></script>  
 </body>
 </html>

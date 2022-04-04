@@ -1,5 +1,6 @@
+//clear the form
 function clearPerson(){
-  for(a in person){
+  for(a in persons[0]){
     document.getElementById(a).value="";
   }
 }
