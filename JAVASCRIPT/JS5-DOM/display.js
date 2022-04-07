@@ -1,3 +1,5 @@
+//Getting data from local storage
+
 function displayPersons(){
     document.querySelector("tbody").innerHTML=""
     persons.forEach((person)=>{
@@ -10,5 +12,5 @@ function displayPersons(){
         }
         document.querySelector("tbody").appendChild(myTr)
     })
-
 }
+displayPersons()
