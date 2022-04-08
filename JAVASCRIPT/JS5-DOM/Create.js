@@ -4,8 +4,8 @@
         lname:"",
         email:""
     }
-    //    var persons=[]
-    var persons=JSON.parse(localStorage.getItem("persons"))
+       var persons=JSON.parse(localStorage.getItem("persons"))
+    // var persons=[]
        function createPerson(){
          
            for(a in person){
