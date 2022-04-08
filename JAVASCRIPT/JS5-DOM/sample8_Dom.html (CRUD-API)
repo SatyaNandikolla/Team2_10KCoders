@@ -58,5 +58,4 @@
  <script src="deletePerson.js"></script>
  <script src="updatePerson.js"></script>
 </body>
-
 </html>
