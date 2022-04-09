@@ -5,7 +5,9 @@ function getData(){
         if(getInfo.status=200 && getInfo.readyState==4){
             console.log(getInfo.response)
             let data=JSON.parse(getInfo.response)
-            console.log(data)
+            // console.log(data)
+            localStorage.setItem("users",JSON.stringify(data))
+            displayUsers(data)
         }
     }
     getInfo.open("GET","https://fakestoreapi.com/users")
