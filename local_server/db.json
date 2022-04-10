@@ -1,3 +1,9 @@
 {
-    "Users":[]
+  "Users": [
+    {
+      "fname": "Murali",
+      "lname": "Krishna",
+      "id": 2
+    }
+  ]
 }
