@@ -10,9 +10,7 @@ function getAllUsers() {
     }
   };
   getInfo.open("GET", API_URL);
-  getInfo.send();
-
-  
+  getInfo.send(); 
 }
 
 function displayUsers() {
@@ -27,7 +25,7 @@ function displayUsers() {
       } else if (a == "address") {
         var myTd = document.createElement("td");
         
-        // We are Having Nested Object
+        //we are having nested object (address is the nested object)
         let results = ""
         for(b in  user[a]){
           results+=user[a][b]+"<br>"
