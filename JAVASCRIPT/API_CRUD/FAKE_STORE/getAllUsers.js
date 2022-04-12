@@ -1,4 +1,4 @@
-let API_URL = "http://localhost:3000/users";
+let API_URL = "http://localhost:3000/users/";
 var allUsers = [];
 function getAllUsers() {
   var getInfo = new XMLHttpRequest();
@@ -100,7 +100,7 @@ function deleteUser(i) {
   getInfo.send();
 }
 
-function updateUser(index) {
+function updateUser() {
   let user = { ...allUsers[index] };
 
   for (a in user) {

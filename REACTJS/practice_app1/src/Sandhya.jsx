@@ -1,9 +1,11 @@
-export default function Sandhya(){
-    return <h2>Hello I Am From Sandhya Component</h2>
+export function Sandhya(){
+    return <h2>Hello I am From Sandhya Component</h2>
 }
-export const Kiran=()=>{
-    return <h2>Hello I Am From Kiran Component</h2>
+
+export const Krishna=()=>{
+    return <h2>Hello I Am From Krishna Component</h2>
 }
-export const Divya=()=>{
-    return <h2>Hello I Am From Divya Component</h2>
+
+export const Sam=()=>{
+    return <h2>Hello I AM From Sam Component</h2>
 }

@@ -1,21 +1,3 @@
-let API_URL = "http://localhost:3000/users/";
-var allUsers = [];
-function getAllUsers() {
-  return new Promise((success)=>{
-    var getInfo = new XMLHttpRequest();
-    getInfo.onreadystatechange = function () {
-      if (getInfo.readyState == 4 && getInfo.status == 200) {
-        allUsers = JSON.parse(getInfo.response);
-        console.log(allUsers);
-        success()
-      }
-    };
-    getInfo.open("GET", API_URL);
-    getInfo.send();
-  })
-}
-
-
 function displayUsers() {
     allUsers.forEach((user, i) => {
       var myTr = document.createElement("tr");
@@ -57,13 +39,12 @@ function displayUsers() {
       document.querySelector("tbody").appendChild(myTr);
     });
   }
-getAllUsers().then(()=>{
-    displayUsers()
-})
 
-
-
-function editUser(i) {
+ async function deleteUser(i){
+     let responce=await handleDelete(i)
+     displayUsers(i)
+  }
+  function editUser(i) {
     index = i;
     for (a in allUsers[i]) {
       if (a !== "address" && a !== "name" && a !== "__v") {
@@ -72,44 +53,7 @@ function editUser(i) {
     }
     console.log(allUsers[i]);
   }
-  
-
-  function handleDelete(){
-      return new Promise((resolve)=>{
-        var DEL_URL = API_URL + allUsers[i].id;
-        var getInfo = new XMLHttpRequest();
-        getInfo.onreadystatechange = function () {
-          if (getInfo.readyState == 4 && getInfo.status == 200) {
-            resolve()
-          }
-        };
-        getInfo.open("DELETE", DEL_URL);
-        getInfo.send();
-      })
-  }
-
-  function deleteUser(i) {
-        handleDelete().then(()=>{
-            displayUsers()
-        })
-  }
-
-  function hanldeUpdate(user){
-    return new Promise((resolve)=>{
-        let UPDATE_URL = API_URL+user.id
-        var getInfo = new XMLHttpRequest();
-        getInfo.onreadystatechange = function () {
-          if (getInfo.readyState == 4 && getInfo.status == 200) {
-            resolve()
-          }
-        };
-        getInfo.open("PUT", UPDATE_URL);
-        getInfo.setRequestHeader("Content-type","application/json")
-        getInfo.send(JSON.stringify(user));
-    })
-  }
-  
-  function updateUser() {
+async function  updateUser(){
     let user = { ...allUsers[index] };
   
     for (a in user) {
@@ -117,11 +61,6 @@ function editUser(i) {
         user[a] = document.getElementById(a).value;
       }
     }
-
-    hanldeUpdate(user).then(()=>{
-        displayUsers()
-    })
-
-  }
-
-
+    let responce=await hanldeUpdate(user)
+    handleGetUsers()
+}

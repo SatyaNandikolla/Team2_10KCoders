@@ -1,15 +1,11 @@
-import './App.css';
-import { Narendhra } from './Narendhra';
-function App() {
-  return (
-    <div className="App">
-      <h2>Hello From App</h2>
-     
-     <Narendhra/>
-      
-    </div>
-  );
-}
+import { Harish } from "./Harish";
 
+function App(){
+  return (
+  <div>
+    <h2>Hello I Am From App Component</h2>
+         <Harish/>
+  </div>
+  )
+}
 export default App;
-                                  

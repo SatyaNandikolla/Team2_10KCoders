@@ -1,28 +1,23 @@
-//Class Component
-import React, { Component } from "react";
-export class Narendhra extends Component {
-//javascript way of displaying the value from javascript to html
-//var message = "Hello From Narendhra Class Component"
-//document.querySelector("h3").innerHTML = message
+import { Component } from "react";
 
-constructor(){
-    super()
-    this.state={}
-}
-
-render() {
-    return <h2></h2>
-}
-}
-
-export class Kiran extends Component {
-    render() {
-        return <h2>I Am From Kiran Class Component</h2>
+export class Narendhra extends Component{
+    //javascript way of displaying the values from js to html
+    // var message="Hello I AM From Js Component"
+    // document.querySelector("h2").innerHTML=message
+    constructor(){
+        this.state={}
     }
-}
+    render(){
+        return(
+            <div>
+                <h2>Hello I Am From Narendhra Class Component</h2>
+            </div>
+        )
+    }
 
-export default class Divya extends Component {
-    render() {
-        return <h2>Hello I Am From Divya Class Component</h2>
+}
+export class Kiran extends Component{
+    render(){
+        return <h2>Hello I Am From  Kiran Class Component</h2>
     }
 }
