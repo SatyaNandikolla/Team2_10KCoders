@@ -8,7 +8,8 @@ export class Greetings extends Component{
     render(){
         return(
             <div>
-                <h2 style={{color:"red"}}>hello I Am From Greetings Component</h2>
+                <h2 style={{color:"red"}}>{this.props.Message}</h2>
+                <h2>{this.props.welcomeMsg}</h2>
             </div>
         )
     }
