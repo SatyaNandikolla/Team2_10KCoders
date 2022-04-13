@@ -5,18 +5,19 @@ export class Harish extends Component{
     constructor(){
         super()
         this.state={
-            Message:"Hello I Am From Harish Component",
-            welcomeMsg:"Hello I Am From welcome component"
+            message:"Welcome to Harish Component",
+            welcMessage:"Welcome to My Component"
         }
     }
     render(){
         return(
             <div>
-                <button onClick={()=>{this.setState({Message:"Hello I Am Harish Component...but i Am Changed"})}}>Change Message</button>
-                {/* <h2>{this.state.Message}</h2> */}
-                <Greetings {...this.state}
-                // msg={this.state.Message}
-                // welc={this.state.welcomeMsg}
+                <button onClick={()=>{this.setState({
+                    message:"Hello I Am Satya Component"
+                })}}>Change Message</button>
+                {/* <h2>{this.state.message}</h2> */}
+                <Greetings 
+                msg={this.state.message}
                 />
             </div>
         )

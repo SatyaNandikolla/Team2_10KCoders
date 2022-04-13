@@ -1,10 +1,12 @@
-import { Harish } from "./Harish";
+import { Employee } from "./Employee";
+import { Students } from "./Students";
 
 function App(){
   return (
   <div>
     <h2>Hello I Am From App Component</h2>
-         <Harish/>
+     <Students/>   
+     <Employee/>
   </div>
   )
 }

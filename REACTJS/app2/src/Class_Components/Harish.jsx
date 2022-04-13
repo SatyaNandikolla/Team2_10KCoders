@@ -15,9 +15,7 @@ export class Harish extends Component {
             {/* <Greetings 
             msg={this.state.message}
             welc={this.state.welcomeMsg} /> */}
-
             <Greetings {...this.state}/>
-        </div>
+        </div>                      
     }
-
 }
