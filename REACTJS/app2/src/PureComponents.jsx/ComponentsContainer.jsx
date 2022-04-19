@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import PureComp from "./PureComp";
 import { NormalComponent } from "./NoramlComponent";
+import FuncChild from "./FuncChild";
 export default class ComponentsContainer extends Component{
     //rcon
     constructor(props){
@@ -21,7 +22,8 @@ export default class ComponentsContainer extends Component{
             <div>
                 <h2>Hello From Container Component</h2>
                 {/* <NormalComponent message={this.state.message} count={this.state.count}/> */}
-                <PureComp message={this.state.message}/>
+                {/* <PureComp message={this.state.message}/> */}
+                <FuncChild message={this.state.message}/>
             </div>
         )
     }
