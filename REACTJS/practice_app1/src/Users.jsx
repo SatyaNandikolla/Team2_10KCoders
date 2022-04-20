@@ -41,7 +41,7 @@ import { getAllUsersAction } from "./Redux/Actions";
 //rcc
 class Users extends Component{
     getAllUserDetails=()=>{
-        this.props.dispatch(getAllUsersAction)
+        this.props.dispatch(getAllUsersAction())
     }
     render(){
         console.log(this.props)

@@ -1,12 +1,11 @@
-import { bindActionCreators } from "redux"
 
-const defaultState = {
-    users: ["Satya","Nandikolla"]
+const defaultdata = {
+    users: ["Satya", "Nandikolla"]
 }
-const rootReducer = (state = defaultState, action) => {
+const rootReducer = (state = defaultdata, action) => {
     switch (action.type) {
         case "Get_All_Users":
-            return ["Satya","Nandikolla"]
+            return ["Satya", "Nandikolla"]
         default:
             return []
     }
