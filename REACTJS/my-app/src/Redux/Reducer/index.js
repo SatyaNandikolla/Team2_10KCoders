@@ -1,13 +1,25 @@
 const defaultState={
-    users:["S","A","T","Y","A"]
+    users: [{fname: "Ram Krishna"}, {fname:"Ravi Krishna"}, {fname:"Sam Sundar"} ]
 }
-let allUsers=["S","A","T","Y","A"]
-const rootReducer=(state=defaultState,action)=>{
+export default function rootReducer(state=defaultState,action){
     switch(action.type){
-        case "Get_All_Users":
-            return allUsers
+        case "Add_User":
+            // console.log(state)
+            //       console.log(action)
+                //   return{...state}
+                var allUsers=[...state]
+                allUsers.push(action.payload)
+                return allUsers
+        case "Delete_User":
+            return state.filter((user)=>user.fname !== action.payload.fname)
+
+        case "Update_User":
+                      console.log(action.payload)
+                      allUsers=[...state]
+                      allUsers[action.payload.id]=action.payload
+                      return allUsers
         default:
-            return []
+            return state.users
+            
     }
-}
-export default rootReducer;                                                                                 
+}                                                                            
