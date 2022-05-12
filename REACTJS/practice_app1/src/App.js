@@ -2,10 +2,15 @@
 // import React from "react";
 // import { ComponentC } from "./CONTEXT(what i understand)/ComponentC";
 
+import { ClassRoom } from "./ClassRoom";
+import { Employee } from "./Employee";
 import Harish from "./Harish";
 import Murali from "./Murali";
 import { Narendhra } from "./Narendhra";
 import {Sandhya, Sonia} from "./Sandhya";
+import { Student } from "./Student";
+import { Students } from "./Students";
+import { User } from "./User";
 
 // export const UserContext=React.createContext()
 
@@ -45,7 +50,11 @@ export default function App(){
     <Sonia/> */}
     {/* <Narendhra/> */}
     {/* <Harish/> */}
-    <Studen
+    {/* <Student/> */}
+    {/* <Employee/> */}
+    {/* <Students/> */}
+    {/* <ClassRoom/> */}
+    <User/>
     </div>
   )
 }

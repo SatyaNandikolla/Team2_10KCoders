@@ -12,27 +12,37 @@
 //     )
 // }
 
-import { Component } from "react";
-import { connect } from "react-redux";
+// import { Component } from "react";
+// import { connect } from "react-redux";
 
 
-//rcc
-class Students extends Component {
-    render() {
-        console.log(this.props)
-        return (
-            <div>
-                {this.props.students.map((std) => {
-                    return <p key={std}>{std}</p>
-                })}
-            </div>
-        )
-    }
+// //rcc
+// class Students extends Component {
+//     render() {
+//         console.log(this.props)
+//         return (
+//             <div>
+//                 {this.props.students.map((std) => {
+//                     return <p key={std}>{std}</p>
+//                 })}
+//             </div>
+//         )
+//     }
+// }
+
+// function mapStateToProps(state) {
+//     return {
+//         students: state.students
+//     }
+// }
+// export default connect(mapStateToProps)(Students)
+export const Students=(props)=>{
+    return(
+        <div>
+            {/* <h2>Hello I AM From Students Component</h2> */}
+            {props.allStudents.map((students)=>{
+                return <p key={students}>{students} <button onClick={()=>{props.handleDelete(students)}}>Delete</button></p>
+            })}
+        </div>
+    )
 }
-
-function mapStateToProps(state) {
-    return {
-        students: state.students
-    }
-}
-export default connect(mapStateToProps)(Students)
