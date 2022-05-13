@@ -1,8 +1,11 @@
 //rafc
+import { UserContext1 } from "../App"
 export const ComponentB=()=>{
     return(
         <div>
-            Context From ComponentB
+            <UserContext1.Consumer>
+                {value=><div>{value}</div>}
+            </UserContext1.Consumer>
         </div>
     )
 }
