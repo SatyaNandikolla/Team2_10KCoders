@@ -6,8 +6,8 @@ import Card from "./REDUX_PROJECT/Card";
 const App = () => {
   return (
     <div>
+      <Badge/>
       <Card />
-        <Badge />
         
     </div>
   )
