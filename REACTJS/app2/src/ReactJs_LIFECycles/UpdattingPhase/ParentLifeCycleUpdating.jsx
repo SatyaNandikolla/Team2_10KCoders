@@ -18,8 +18,8 @@ export class ParentLifeCycleUpdating extends Component{
     // }
     shouldComponentUpdate(nextProps,nextState){
         console.log("Parent shouldComponentUpdare")
-        // return true;
-        return false;
+        return true;
+        // return false;
     }
     getSnapshotBeforeUpdate(prevProps,prevState){
         console.log("Parent getSnapshotBeforeUpdate")
@@ -37,7 +37,7 @@ export class ParentLifeCycleUpdating extends Component{
     }
     render(){
         // console.log(this.state.name)
-        console.log("Parent Rednder")
+        console.log("Parent Render")
         return(
             <div>
                 ParentLifeCycle

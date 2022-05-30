@@ -1,4 +1,4 @@
-export const IncAction=(value)=> async dispatch=>{
+export const IncAction=(value)=>async dispatch=>{
     dispatch({
         type:"INCREMENT",
         payload:value

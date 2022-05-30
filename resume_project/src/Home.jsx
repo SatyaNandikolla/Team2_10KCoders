@@ -6,4 +6,4 @@ export const Home=()=>{
             <h2>Hello I AM From Home Component</h2>
         </div>
     )
-} 
+}

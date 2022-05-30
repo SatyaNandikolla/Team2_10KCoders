@@ -14,7 +14,7 @@ export const Student=()=>{
         // delete students[val]
         let newStudents={...students}
         delete newStudents[val]
-        setStudents(newStudents)
+        setStudents(newStudents)  
     }
     return(
         <div>

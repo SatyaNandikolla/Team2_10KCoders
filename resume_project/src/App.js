@@ -5,7 +5,7 @@ import { Users } from "./Users";
 import './css/style.default.css';
 import './css/custom.css'
 import { Header } from "./Components/Header";
-import { Slider } from "./Components/Slider";
+import {Slider} from "./Components/Slider"
 import { Expertise } from "./Components/Expertise";
 import { Education } from "./Components/Education";
 import { Experience } from "./Components/Experience";
@@ -22,7 +22,7 @@ function App() {
       <Slider/>
       
         <Routes>
-          <Route path="" element={<About/>}/>
+          <Route path="" element={<Home/>}/>
           <Route path="about" element={<About/>}/>
             <Route path="expertise" element={<Expertise/>}/>
             <Route path="education" element={<Education/>}/>

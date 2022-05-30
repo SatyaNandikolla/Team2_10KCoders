@@ -7,9 +7,10 @@ import RegularComp from "./RegularComp"
 export default class ParentComp extends Component{
     state={name:"Satya"}
     componentDidMount(){
-       setInterval(()=>{
-           this.setState({name:"Satya"})
-       },2000)
+        setInterval(()=>{
+            this.setState({name:"Satya"})
+            
+        },2000)
     }
    render(){
        console.log("==Parent==")
@@ -17,7 +18,7 @@ export default class ParentComp extends Component{
            <div>{this.state.name}
            <PureComp/>
            <RegularComp/>
-           <MemoComp/>
+           {/* <MemoComp/> */}
            </div>
            
        )
