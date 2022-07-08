@@ -27,3 +27,4 @@ const Qa = ({question,handleChange,index}) => {
 }
 
 export default Qa
+
